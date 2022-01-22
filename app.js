@@ -107,3 +107,51 @@ const calculator = {
 	},
 };
 calculator.add(5, 3);
+// Calculator 구현
+const calculator1 = {
+	plus: function(a, b) {
+		console.log(a + b);
+	},
+	minus: function(a, b) {
+		console.log(a - b);
+	},
+	times: function(a, b) {
+		console.log(a * b);
+	}
+	divide: function(a, b) {
+		console.log(a / b);
+	},
+	power: function(a, b) {
+		console.log(a ** b);
+	},
+}
+
+calculator1.plus(5, 3);
+calculator1.minus(3, 1);
+calculator1.divide(9, 4);
+calculator1.power(8, 3);
+
+// return
+const calculator2 = {
+	plus2: function(a, b) {
+		return a + b;
+	},
+	minus2: function(a, b) {
+		return a - b;
+	},
+	times2: function(a, b) {
+		return a * b;
+	}
+	divide2: function(a, b) {
+		return a / b;
+	},
+	power2: function(a, b) {
+		return a ** b;
+	},
+}
+
+const plusResult = calculator2.plus2(3, plusResult);
+const minusResult = calculator2.minus2(plusResult, 7);
+const timessResult = calculator2. times2(3, minusResult);
+const divideResult = calculator2.divide2(timessResult, 7);
+const powerResult = calculator2.power2(minusResult, divideResult);
