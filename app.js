@@ -1,3 +1,4 @@
+/*
 // variable
 const a = 5;
 const b = 2;
@@ -117,7 +118,7 @@ const calculator1 = {
 	},
 	times: function(a, b) {
 		console.log(a * b);
-	}
+	},
 	divide: function(a, b) {
 		console.log(a / b);
 	},
@@ -141,7 +142,7 @@ const calculator2 = {
 	},
 	times2: function(a, b) {
 		return a * b;
-	}
+	},
 	divide2: function(a, b) {
 		return a / b;
 	},
@@ -150,8 +151,121 @@ const calculator2 = {
 	},
 }
 
-const plusResult = calculator2.plus2(3, plusResult);
+const plusResult = calculator2.plus2(3, 5);
 const minusResult = calculator2.minus2(plusResult, 7);
 const timessResult = calculator2. times2(3, minusResult);
 const divideResult = calculator2.divide2(timessResult, 7);
 const powerResult = calculator2.power2(minusResult, divideResult);
+
+// Conditionals 1, 2, 3
+const age = parseInt(prompt("How old are you?"));
+
+if (isNaN(age) || age < 0) {
+	console.log("Pleas write a number");
+} else if (age < 18) {
+	console.log("You are too young");
+} else if (age >= 18 && age <= 50) {
+	console.log("You can drink");
+} else if (age > 50 && age <=80) {
+	console.log("You should exercise");
+} else if (age > 80) {
+	console.log("You can do whatever you want")
+}
+else {
+	console.log("Thank you for writing your age");
+}
+*/
+/*
+// html in js
+const title1 = document.getElementById("title")
+
+title1.innerText = "Got you!";
+console.log(title1.className);
+*/
+/*
+const h1 = document.querySelector("div.hello:first-child h1");
+
+// console.dir(title);
+function handleTitleClick() {
+	h1.style.color = "blue";
+}
+
+function handleMouseEnter() {
+	h1.innerText = "Mouse is here!";
+}
+
+function handleMouseLeave() {
+	h1.innerText = "Mouse is gone!";
+}
+
+function handleWindowResize() {
+	document.body.style.backgroundColor = "tomato";
+}
+
+function handleWindowCopy() {
+	alert("copier!");
+}
+
+function handleWindowOffline() {
+	alert("SOS no WIFI")
+}
+
+function handleWindowOnline() {
+	alert("ALL GOOD")
+}
+
+h1.addEventListener("click", handleTitleClick);
+// h1.onclick = handleh1Click
+h1.addEventListener("mouseenter", handleMouseEnter);
+h1.addEventListener("mouseleave", handleMouseLeave);
+//window events
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
+window.addEventListener("offline", handleWindowOffline);
+window.addEventListener("online", handleWindowOnline);
+*/
+
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+	h1.classList.toggle("clicked")
+}
+h1.addEventListener("click", handleTitleClick);
+	/*const clickedClass = "clicked";
+	if (h1.classList.contains(clickedClass)) {
+		h1.classList.remove(clickedClass);
+	} else {
+		h1.classList.add(clickedClass);
+	}
+}
+
+	/*const clickedClass = "clicked";
+	if (h1.className === clickedClass) {
+		h1.className = "";
+	} else {
+		h1.className = clickedClass;
+	}
+}
+	/*
+	h1.className = "active";
+}
+	const currentColor = h1.style.color;
+	let newColor;
+	if (currentColor === "blue") {
+		newColor = "tomato";
+	} else {
+		newColor = "blue";
+	}
+	h1.style.color = newColor;
+}
+
+	/*
+	if (h1.style.color === "blue") {
+		h1.style.color = "tomato";
+	} else {
+		h1.style.color = "blue";
+	}
+}
+*/
+
+
