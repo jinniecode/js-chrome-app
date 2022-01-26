@@ -21,4 +21,4 @@ function getClock() {
 }
 
 getClock();
-setInterval(getClock, 1000);``
+setInterval(getClock, 1000);
