@@ -13,8 +13,9 @@ function saveToDos() {
 function deleteToDo(event) {
   // console.log("Pepepee")
   const li = event.target.parentElement;
-  console.log(li.id);
   li.remove();
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  saveToDos();
 }
 
 function paintToDO(newTodo) {
@@ -64,3 +65,10 @@ if (savedToDos/*==! null*/) {
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDO);
 }
+
+// Delete 개념이 array에서 삭제하는 것이 아닌, item을 삭제한 array를 더 만드는 것임
+/*
+const nct = [{name: "mark"}, {name: "jae"}, {name: "ten"}];
+
+function sexyfilter(verysexy) {return name !== "ten"};
+*/
